@@ -1,0 +1,5 @@
+Student name: Tarik Beentjes
+Student number: 672148
+Student class: INF1A
+URL student GitHub website: https://tarikbeentjes61.github.io
+URL student GitHub repository: https://github.com/TarikBeentjes61/WebMarkupAssessment1
