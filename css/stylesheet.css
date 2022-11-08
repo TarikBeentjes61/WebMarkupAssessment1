@@ -1,152 +1,72 @@
-
+#checkbox {
+	display: none;
+}
 @media screen and (max-width: 719px) 
 {
-	#hamburger {
-		display: flex;
-	}
-	#hamburger:hover + #hamburgermenu{
-		display:flex;
-		flex-basis:25%;
-	}
-	#navbarlist {
-		display:none;
-	}
-	#aside-tablet {
-		display: none;
-	}
-	header {
-		display: flex;
-		flex-wrap: wrap;
-	}
-	#logoflex { 
-		display: flex;
-		flex-basis: 100%;
-		width: 100px;
-		height: 100px;
-	}
-	#websitetitle {
-		flex-basis: 100%;
-		background-color: #88f;
-		margin: 0;
-	}
-	#payoff {
-		flex-basis: 100%;
-		background-color: #88f;
-		margin: 0;
-	}
-	#hamburgermenu {
-		display:none;
-	}
-	#navbarlist {
-		background-color: #eb3434;
-		display: flex;
-	}
-	.navbaritem {
-		background-color: #37eb34;
-		flex-wrap: wrap;
-		flex-basis: 33%;
-	}
-	#hamburger {
-		display:none;
-	}	
-	
 	section {
 		display: flex;
 		flex-wrap: wrap;
 		background-color: #fdff78;
-		
 	}
 	article {
-		flex-basis: 80%;
+		flex-basis: 100%;
 		flex-shrink: 1;
 		flex-grow: 0;
 		background-color: #f5aa4e;
 	}
-	#promotionvideo {
-		width: 100px;
-		flex-basis: 100%;
-	}	
+	label {
+		display: flex;
+		flex: 40%;
+		background: lightgrey;
+	}
 	.articleimg {
-		  float: right;
+		  float: left;
 		  height: 200px;
 		  width: 200px;
 	}
-	#aside-pc {
-		flex-basis: 20%;
-		background-color: #8157b5;
-		flex-grow: 0;
-		flex-shrink: 0;
+	.aside-pc {
+		display: none;
 	}
-	#asidelist {
-		
+	.header {
+		height: 100px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
 	}
-	.asidelistitem {
-		
+	#hamburgermenu {
+		flex: 40%;
+		display:none;
+		order:4;
+		color: white;
+		list-style-type: none;
 	}
-	footer {
-		flex-basis: 80%;
+	#checkbox:checked + label +#hamburgermenu{
+		display:flex;
+		color: white;
+		padding:0;
 	}
-	#cookiestatement {
-		position: fixed;
-		bottom: 0;
-		right: 0;
-		color: #FFF;
-		background-color: #FA0;
-		opacity: 0.5;
-	}
-}
-@media screen and (min-width: 720px) and (max-width: 929px)
-{
 	#aside-tablet {
 		display: flex;
 		flex-basis: 100%;
 	}
-	#aside-pc {
+	#logoflex { 
 		display: none;
 	}
-	#logoflex { 
-		display: flex;
-		flex-basis: 100%;
-		width: 100px;
-		height: 100px;
-	}
 	#websitetitle {
-		flex-basis: 100%;
+		flex: 60%;
 		background-color: #88f;
 		margin: 0;
 	}
 	#payoff {
-		flex-basis: 100%;
+		flex-basis: 60%;
 		background-color: #88f;
 		margin: 0;
 	}
-	#hamburgermenu {
+	#navbar {
 		display:none;
 	}
 	#navbarlist {
-		background-color: #eb3434;
-		display: flex;
-	}
-	.navbaritem {
-		background-color: #37eb34;
-		flex-wrap: wrap;
-		flex-basis: 33%;
-	}
-	#hamburger {
-		display:none;
-	}	
-	
-	section {
-		display: flex;
-		flex-wrap: wrap;
-		background-color: #fdff78;
-		
-	}
-	article {
-		flex-basis: 100%;
-		flex-shrink: 1;
-		flex-grow: 0;
-		background-color: #f5aa4e;
+		display: none;
 	}
 	#article1 {
 		order: 3;
@@ -158,26 +78,90 @@
 		width: 100px;
 		flex-basis: 100%;
 	}	
+	#cookiestatement {
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		color: #FFF;
+		background-color: #FA0;
+		opacity: 0.5;
+	}
+}
+@media screen and (min-width: 720px) and (max-width: 929px)
+{
+	section {
+		display: flex;
+		flex-wrap: wrap;
+		background-color: #fdff78;
+	}
+	article {
+		flex-basis: 100%;
+		flex-shrink: 1;
+		flex-grow: 0;
+		background-color: #f5aa4e;
+	}
 	.articleimg {
 		  float: left;
 		  height: 200px;
 		  width: 200px;
 	}
-	#aside-pc {
-		flex-basis: 20%;
-		background-color: #8157b5;
-		flex-grow: 0;
-		flex-shrink: 0;
+	.aside-pc {
+		display: none;
 	}
-	#asidelist {
-		
+	.navbaritem {
+		background-color: #37eb34;
+		padding: 0px 20px 0px 20px;
 	}
-	.asidelistitem {
-		
+	#navbarlist {
+		background-color: #eb3434;
+		flex-basis: 33%;
+		display: flex;
+		flex-wrap: nowrap;
+		flex-shrink: 2;
+		list-style-type: none;
 	}
-	footer {
-		flex-basis: 80%;
+	#menulabel {
+		display:none;
 	}
+	#aside-tablet {
+		display: flex;
+		flex-basis: 100%;
+	}
+	#logoflex { 
+		display: flex;
+		flex-basis: 100%;
+		width: 100px;
+		height: 100px;
+	}
+	#websitetitle {
+		flex-basis: 100%;
+		background-color: #88f;
+		margin: 0;
+	}
+	#payoff {
+		flex-basis: 100%;
+		background-color: #88f;
+		margin: 0;
+	}
+	#hamburgermenu {
+		display:none;
+	}
+	#navbar {
+		flex-basis: 100%;
+	}
+	#hamburger {
+		display:none;
+	}	
+	#article1 {
+		order: 3;
+	}
+	#article3 {
+		order: 1;
+	}
+	#promotionvideo {
+		width: 100px;
+		flex-basis: 100%;
+	}	
 	#cookiestatement {
 		position: fixed;
 		bottom: 0;
@@ -188,14 +172,43 @@
 	}
 }
 @media screen and (min-width: 930px) {
+	section {
+		background-color: #fdff78;
+	}
+	article {
+		flex-basis: 80%;
+		background-color: #f5aa4e;
+	}
 	.flexbox {
 		display: flex;
 		flex-wrap: wrap;
 	}
+	.articleimg {
+		  float: right;
+		  height: 200px;
+		  width: 200px;
+	}
+	.aside-pc {
+		flex-basis: 20%;
+		background-color: #8157b5;
+	}
+	.navbaritem {
+		background-color: #37eb34;
+		padding: 0px 20px 0px 20px;
+	}
+	#navbarlist {
+		background-color: #eb3434;
+		flex-basis: 100%;
+		display: flex;
+		flex-wrap: nowrap;
+		list-style-type: none;
+	}
+	#menulabel {
+		display:none;
+	}
 	#aside-tablet {
 		display: none;
 	}
-	
 	#logoflex { 
 		flex-basis: 100%;
 		width: 100px;
@@ -214,65 +227,16 @@
 	#hamburgermenu {
 		display:none;
 	}
-	nav {
-		display: flex;
-		flex-wrap: wrap;
-	}
-	#navbarlist {
-		background-color: #eb3434;
+	#navbar {
 		flex-basis: 100%;
-		display: flex;
-		flex-wrap: wrap;
-	}
-	.navbaritem {
-		background-color: #37eb34;
-		flex-wrap: wrap;
-		flex-basis: 33%;
 	}
 	#hamburger {
 		display:none;
 	}	
-	
-	section {
-		
-		flex-wrap: wrap;
-		background-color: #fdff78;
-		
-	}
-	article {
-		flex-basis: 80%;
-		flex-shrink: 1;
-		flex-grow: 0;
-		background-color: #f5aa4e;
-	}
 	#promotionvideo {
 		width: 100px;
 		flex-basis: 100%;
 	}	
-	.articleimg {
-		  float: right;
-		  height: 200px;
-		  width: 200px;
-	}
-	#aside-pc {
-		flex-basis: 20%;
-		background-color: #8157b5;
-		flex-grow: 0;
-		flex-shrink: 0;
-	}
-	#asidelist {
-		
-	}
-	.asidelistitem {
-		
-	}
-	footer {
-		display: flex;
-		flex-basis: 60%;
-		flex-shrink: 1;
-		flex-wrap: nowrap;
-		
-	}
 	#cookiestatement {
 		position: fixed;
 		bottom: 0;
@@ -280,6 +244,15 @@
 		color: #FFF;
 		background-color: #FA0;
 		opacity: 0.5;
+		margin: 8px;
+	}
+	.grid-box {
+		display: grid;
+		grid-template-columns: 40% 35% 25%;
+		grid-gap:10px;
+	}
+	.grid-fill {
+		grid-column: 1/1;
 	}
 }
 	
