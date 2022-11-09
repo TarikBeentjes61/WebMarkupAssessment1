@@ -44,6 +44,7 @@
 }
 #aside {
 	grid-area: aside;
+	background-color: #D0CECE;
 }
 #product1 {
 	grid-area: product1;
@@ -58,8 +59,17 @@
 #product3 {
 	grid-area: product3;
 	width: 100%;
-	width: 100%;
 	height: 100%;
+}
+#table {
+	grid-area: table;
+	border: solid 3px black;
+	background-color: #BDD7EE;
+}
+#tablefooter {
+	grid-area: tablefooter;
+	border: solid 3px black;
+	background-color: #BDD7EE;
 }
 @media screen and (max-width: 719px) 
 {
@@ -146,7 +156,7 @@
 		opacity: 0.5;
 		margin: 8px;
 	}
-	.grid-box-header {
+	.grid-product-header {
 		display: grid;
 		grid-template-columns: 65% 35%;
 		border: solid 5px red;
@@ -155,7 +165,7 @@
 			'payoff nav'
 		;
 	}
-	.grid-box {
+	.grid-product {
 		display: grid;
 		grid-template-columns: 65% 35%;
 		border: solid 5px blue;
@@ -175,7 +185,7 @@
 			'aside    aside   '
 		;
 	}
-	.grid-box-aside {
+	.grid-product-aside {
 		display: grid;
 		grid-template-columns: 100%;
 		border: solid 5px purple;
@@ -185,7 +195,7 @@
 			'product3'
 		;
 	}
-	.grid-box-footer {
+	.grid-product-footer {
 		display: grid;
 		grid-template-columns: 65% 35%;
 		border: solid 5px orange;
@@ -293,7 +303,7 @@
 		opacity: 0.5;
 		margin: 8px;
 	}
-	.grid-box-header {
+	.grid-product-header {
 		display: grid;
 		grid-template-columns: 100%;
 		border: solid 5px red;
@@ -304,7 +314,7 @@
 			'nav   '
 		;
 	}
-	.grid-box {
+	.grid-product {
 		display: grid;
 		grid-template-columns: 50% 50%;
 		border: solid 5px blue;
@@ -320,7 +330,7 @@
 			'aside    aside   '
 		;
 	}
-	.grid-box-aside {
+	.grid-product-aside {
 		display: grid;
 		grid-template-columns: 50% 50%;
 		border: solid 5px purple;
@@ -328,7 +338,7 @@
 			'product1 product2'
 		;
 	}
-	.grid-box-footer {
+	.grid-product-footer {
 		display: grid;
 		grid-template-columns: 50% 50%;
 		border: solid 5px orange;
@@ -336,6 +346,44 @@
 			'copy null'
 			'copy null'
 		;
+	}
+	.grid-pricing-header {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		border: solid 5px red;
+		grid-template-areas:
+			'logo     logo 	' 
+			'title    title '
+			'payoff   payoff'
+			'nav      nav 	'
+		;
+	}
+	.grid-pricing {
+		display: grid;
+		grid-template-columns: 100%;
+
+		border: solid 5px blue;
+		grid-template-areas:
+			'article1 	'
+			'table    	'
+			'table    	'
+			'table    	'
+			'table      '
+			'table      '
+			'tablefooter'
+			'aside      '
+		;
+	}
+	.grid-pricing-aside {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		border: solid 5px purple;
+		grid-template-areas:
+			'product2 product3'
+		;
+	}
+	#product1 {
+		display: none;
 	}
 	#article4 {
 		display:none
@@ -420,7 +468,7 @@
 		opacity: 0.5;
 		margin: 8px;
 	}
-	.grid-box-header {
+	.grid-product-header {
 		display: grid;
 		grid-template-columns: 40% 35% 25%;
 		border: solid 5px red;
@@ -431,7 +479,7 @@
 			'nav      nav 	   nav	   '
 		;
 	}
-	.grid-box {
+	.grid-product {
 		display: grid;
 		grid-template-columns: 40% 35% 25%;
 		border: solid 5px blue;
@@ -446,7 +494,7 @@
 			'aside    aside    aside   '
 		;
 	}
-	.grid-box-aside {
+	.grid-product-aside {
 		display: grid;
 		grid-template-columns: 40% 35% 25%;
 		border: solid 5px purple;
@@ -454,7 +502,7 @@
 			'product1 product2 product3'
 		;
 	}
-	.grid-box-footer {
+	.grid-footer {
 		display: grid;
 		grid-template-columns: 40% 35% 25%;
 		border: solid 5px orange;
@@ -463,8 +511,41 @@
 			'copy copy null'
 		;
 	}
-	.grid-fill {
-		grid-column: 1/1;
+	.grid-pricing-header {
+		display: grid;
+		grid-template-columns: 40% 35% 25%;
+		border: solid 5px red;
+		grid-template-areas:
+			'logo     logo 	   logo	   ' 
+			'title    title    title   '
+			'payoff   payoff   payoff  '
+			'nav      nav 	   nav	   '
+		;
+	}
+	.grid-pricing {
+		display: grid;
+		grid-template-columns: 40% 35% 25%;
+
+		border: solid 5px blue;
+		grid-template-areas:
+			'article1 	 article1 article1'
+			'table    	 table       aside'
+			'table    	 table       aside'
+			'table    	 table       aside'
+			'table       table       aside'
+			'table       table    	 aside'
+			'tablefooter tablefooter aside'
+		;
+	}
+	.grid-pricing-aside {
+		display: grid;
+		grid-template-columns: 100%;
+		border: solid 5px purple;
+		grid-template-areas:
+			'product1'
+			'product2'
+			'product3'
+		;
 	}
 }
 	
