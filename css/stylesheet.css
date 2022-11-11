@@ -1,7 +1,17 @@
-/*Hallo o/ */
 @import url('https://fonts.googleapis.com/css?family=Notable');
+/*
+Hallo o/ 
+cmyk(0%, 22%, 83%, 0%);
+*/
+
 body {
 	font-family: Ariel, Helvetica, sans-serif;
+	margin: 0px;
+}
+aside {
+	display: grid;
+	grid-area: aside;
+	background-color: #D0CECE;
 }
 p::first-letter{
 	font-size: 24px;
@@ -11,11 +21,6 @@ a:hover {
 }
 a:active {
 	color: pink;
-}
-aside {
-	display: grid;
-	grid-area: aside;
-	background-color: #D0CECE;
 }
 td{
 	border: solid 2px gray;
@@ -136,9 +141,12 @@ fieldset > label {
 		color: #FFF;
 		background-color: #FA0;
 		opacity: 0.5;
-		margin: 8px;
 		z-index: 9999;
 }
+.flexbox {
+		display: flex;
+		flex-wrap: wrap;
+	}
 .grid-header {
 	display: grid;
 	border: solid 5px red;
@@ -155,7 +163,6 @@ fieldset > label {
 	display: grid;
 	border: solid 5px orange;
 }
-
 @media screen and (max-width: 480px) 
 {
 	body {
@@ -202,6 +209,11 @@ fieldset > label {
 		color: white;
 		padding:0;
 	}
+	#homepage #checkbox:checked + label + #nav {
+		display:flex;
+		flex-basis: 40%;
+		order:3;
+	}
 	#aside-tablet {
 		display: flex;
 		flex-basis: 100%;
@@ -210,20 +222,20 @@ fieldset > label {
 		display: none;
 	}
 	#websitetitle {
-		flex: 60%;
+		flex-basis: 60%;
 		background-color: #88f;
 		margin: 0;
+		order:0;
+	}
+	#menulabel {
+		flex-basis: 40%;
+		order:1;
 	}
 	#payoff {
 		flex-basis: 60%;
 		background-color: #AEAAAA;
 		margin: 0;
-	}
-	#navbar {
-		display:none;
-	}
-	#navbarlist {
-		display: none;
+		order:2;
 	}
 	#article1 {
 		order: 3;
@@ -231,11 +243,37 @@ fieldset > label {
 	#article3 {
 		order: 1;
 	}
+	#article4 {
+		display: none;
+	}
+	#article6 {
+		display: none;
+	}
+	#article-pricing {
+		display: none;
+	}
 	#promotionvideo {
 		width: 100px;
 		flex-basis: 100%;
+	}
+	#logo {
+		display:none;
+	}
+	#nav {
+		display:none;
+	}
+	#menu {
+		grid-area: menu;
 	}	
-	
+	#homepage #cookiestatement {
+		width: 33%
+	}
+	#product #cookiestatement {
+		width: 35%;
+	}
+	#pricing #cookiestatement {
+		width: 50%;
+	}
 	#contact #cookiestatement{
 		width: 40%;	
 	}
@@ -357,7 +395,7 @@ fieldset > label {
 	#contact .grid-aside {
 		display: grid;
 		border: solid 5px purple;
-		grid-template-columns: 100%
+		grid-template-columns: 100%;
 		grid-template-areas:
 			'product1'
 			'product2'
@@ -373,24 +411,7 @@ fieldset > label {
 			'copy .'
 		;
 	}
-	#article-pricing {
-		display: none;
-	}
-	#article6 {
-		display: none;
-	}
-	#article4 {
-		display: none;
-	}
-	#logo {
-		display:none;
-	}
-	#nav {
-		display:none;
-	}
-	#menu {
-		grid-area: menu;
-	}
+	
 }
 @media screen and (min-width: 481px) and (max-width: 1279px)
 {
@@ -464,10 +485,22 @@ fieldset > label {
 	#article3 {
 		order: 1;
 	}
+	#homepage #nav {
+		flex-basis: 100%;
+	}
 	#promotionvideo {
 		width: 100px;
 		flex-basis: 100%;
 	}	
+	#homepage #cookiestatement {
+		width: 20%
+	}
+	#product #cookiestatement {
+		width: 50%;
+	}
+	#pricing #cookiestatement {
+		width: 50%;
+	}
 	#contact #cookiestatement{
 		width: 25%;	
 	}
@@ -595,10 +628,6 @@ fieldset > label {
 		flex-basis: 80%;
 		background-color: #f5aa4e;
 	}
-	.flexbox {
-		display: flex;
-		flex-wrap: wrap;
-	}
 	.articleimg {
 		  float: right;
 		  height: 200px;
@@ -608,16 +637,8 @@ fieldset > label {
 		flex-basis: 20%;
 		background-color: #8157b5;
 	}
-	.navbaritem {
-		background-color: #37eb34;
-		padding: 0px 20px 0px 20px;
-	}
-	#navbarlist {
-		background-color: #eb3434;
+	#homepage #nav {
 		flex-basis: 100%;
-		display: flex;
-		flex-wrap: nowrap;
-		list-style-type: none;
 	}
 	#menulabel {
 		display:none;
@@ -642,17 +663,20 @@ fieldset > label {
 	}
 	#hamburgermenu {
 		display:none;
-	}
-	#navbar {
-		flex-basis: 100%;
-	}
-	#hamburger {
-		display:none;
 	}	
 	#promotionvideo {
 		width: 100px;
 		flex-basis: 100%;
 	}	
+	#homepage #cookiestatement {
+		width: 20%
+	}
+	#product #cookiestatement {
+		width: 25%;
+	}
+	#pricing #cookiestatement {
+		width: 25%;
+	}
 	#contact #cookiestatement{
 		width: 30%;	
 	}
@@ -768,7 +792,6 @@ fieldset > label {
 			'copy copy .'
 		;
 	}
-
 }
 	
 	
